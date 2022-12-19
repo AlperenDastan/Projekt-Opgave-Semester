@@ -15,9 +15,23 @@
   },
   {
     "Id": 2,
-    "Name": "Abuumin",
+    "Name": "Ulrik",
     "Address": "Zindibad 3. tv",
     "Phonenumber": "51525354",
     "Email": "Lardesnii\u00E6h@hotmail.com"
+  },
+  {
+    "Id": 7,
+    "Name": "Ulrik Jensen",
+    "Address": "Yarrak kafa 3tv",
+    "Phonenumber": "53949321",
+    "Email": "Ulrikjensen@gmail.com"
+  },
+  {
+    "Id": 8,
+    "Name": "Ulrik Olsen",
+    "Address": "Got kafa sad3asdd",
+    "Phonenumber": "123123",
+    "Email": "asdasd"
   }
 ]

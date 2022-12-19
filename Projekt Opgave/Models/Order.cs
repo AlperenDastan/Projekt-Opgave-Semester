@@ -1,6 +1,6 @@
 ﻿namespace Projekt_Opgave.Models
 {
-    public class Order
+    public class OrderModel
     {
         public int OrderId { get; set; }
 
@@ -15,7 +15,7 @@
         public string DeliveryDate { get; set; }
 
 
-        public Order(int id, string item, int amount, double totalPrice, string orderdate, string deliverydate)
+        public OrderModel(int id, string item, int amount, double totalPrice, string orderdate, string deliverydate)
         {
             OrderId = id;
             Item = item;
@@ -25,9 +25,5 @@
             DeliveryDate = deliverydate;
         }
 
-        public Order()
-        {
-
-        }
     }
 }

@@ -8,9 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<ItemService, ItemService>();
+builder.Services.AddSingleton<OrderService, OrderService>();
 builder.Services.AddSingleton<CustomerService, CustomerService>();
 builder.Services.AddTransient<JsonFileItemService>();
 builder.Services.AddTransient<JsonFileCustomerService>();
+builder.Services.AddTransient<JsonFileServiceOrder>();
 
 
 var app = builder.Build();

@@ -8,13 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Order\**" />
+    <Content Remove="Pages\Order\**" />
+    <EmbeddedResource Remove="Pages\Order\**" />
+    <None Remove="Pages\Order\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Models\Customer.cs" />
     <Content Include="Models\Item.cs" />
     <Content Include="Models\Order.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Order\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
