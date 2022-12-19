@@ -22,15 +22,16 @@ namespace Projekt_Opgave.Service.Customer_Service
             _customers = MockCustomers.GetMockCustomers();
         }
 
+        void MinMetoder()
+        {
+            // logic
+            // LinQ / LINQ / Lin q
+        }
+
         public Customer GetCustomer(int id)
         {
-            foreach (Customer customer in _customers)
-            {
-                if (customer.Id == id)
-                    return customer;
-            }
-
-            return null;
+            var customer = _customers.Find(x => x.Id == id);
+            return customer;
         }
         public void AddCustomer(Customer customer)
         {

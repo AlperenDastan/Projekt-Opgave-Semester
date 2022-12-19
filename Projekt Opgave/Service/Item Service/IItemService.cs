@@ -10,7 +10,7 @@ namespace Projekt_Opgave.Service.Item_Service
         void AddItem(Item item);
         void UpdateItem(Item item);
         Item GetItem(int id);
-        public Item DeleteItem(int id);
+        public Item DeleteItem(int id); 
         IEnumerable<Item> NameSearch(string str);
         IEnumerable<Item> PriceFilter(int maxPrice, int minPrice = 0);
     }
