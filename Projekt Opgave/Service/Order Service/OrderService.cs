@@ -3,5 +3,7 @@
     public class OrderService : IOrderService
     {
 
+        public string test { get; set; }
+
     }
 }

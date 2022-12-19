@@ -4,7 +4,6 @@ namespace Projekt_Opgave.Service.Customer_Service
 {
     public interface ICustomerService
     {
-
         List<Customer> GetCustomers();
         void AddCustomer(Customer customer);
         void UpdateCustomer(Customer customer);
