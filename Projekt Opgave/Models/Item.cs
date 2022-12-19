@@ -23,7 +23,7 @@ namespace Projekt_Opgave.Models
 
         public string Description { get; set; }
 
-        [Display(Name = "´Tag")]
+        [Display(Name = "Tag")]
         [Required(ErrorMessage = "Der skal angives et Tag")]
         public string Tag { get; set; }
 

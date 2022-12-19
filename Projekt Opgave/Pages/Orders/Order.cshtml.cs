@@ -30,6 +30,7 @@ namespace Projekt_Opgave.Pages.Orders
 
 		public IActionResult OnGet()
 		{
+			Order = _orderService.GetItems();
 			return Page();
 		}
 
@@ -39,7 +40,7 @@ namespace Projekt_Opgave.Pages.Orders
 			{
 				return Page();
 			}
-			//_orderService.AddItem(Order);
+			_orderService.AddItem(Order);
 			return RedirectToPage("GetAllItems");
 		}
 	}

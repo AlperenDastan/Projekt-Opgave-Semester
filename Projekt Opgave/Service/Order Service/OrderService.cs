@@ -66,9 +66,14 @@ namespace Projekt_Opgave.Service.Order_Service
 			_items.Add(item);
 			JsonFileItemService.SaveJsonItems(_items);
 		}
+        public void AddItem(List<OrderModel> item)
+        {
+            _items.AddRange(item);
+            JsonFileItemService.SaveJsonItems(_items);
+        }
 
 
-		public void UpdateItem(OrderModel item)
+        public void UpdateItem(OrderModel item)
 		{
 			if (item != null)
 			{

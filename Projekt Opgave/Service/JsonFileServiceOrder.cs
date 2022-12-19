@@ -14,7 +14,7 @@ namespace Projekt_Opgave.Service
 
 		private string JsonFileName
 		{
-			get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Orders.json"); }
+			get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "OrderModel.json"); }
 		}
 
 		public void SaveJsonItems(List<OrderModel> order)
