@@ -1,0 +1,47 @@
+﻿@page "{id:int}"
+@model Projekt_Opgave.Pages.Item.EditItemModel
+@{
+}
+<div class="colorcoding2">
+
+
+<form method="post">
+	<div class="form-group">
+		<label asp-for="Item.Id" class="control-label"></label>
+		<input asp-for="Item.Id" class="form-control" readonly="@(true)"/>
+	</div>
+	<div class="form-group">
+		<label asp-for="Item.Name" class="control-label"></label>
+		<input asp-for="Item.Name" class="form-control" />
+		<span asp-validation-for="Item.Name" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Item.Price" class="control-label"></label>
+		<input asp-for="Item.Price" class="form-control" />
+		<span asp-validation-for="Item.Price" class="text-danger"></span>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="Item.Description" class="control-label"></label>
+		<input asp-for="Item.Description" class="form-control" />
+		<span asp-validation-for="Item.Description" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Item.Tag" class="control-label"></label>
+		<input asp-for="Item.Tag" class="form-control" />
+		<span asp-validation-for="Item.Tag" class="text-danger"></span>
+	</div>
+
+	<p>
+		<div class="form-group">
+			<input type="submit" value="Update" class="btn btn-primary" />
+		</div>
+	</p>
+</form>
+</div>
+
+<br />
+<p>
+	<a asp-page="/Item/GetAllItems" class="btn btn-primary">Back to List</a>
+</p>
+

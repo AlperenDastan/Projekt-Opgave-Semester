@@ -1,0 +1,72 @@
+﻿@page
+@model Projekt_Opgave.Pages.Customer.GetAllCustomersModel
+@{
+}
+
+<h1 class="colorcoding">Customers</h1>
+
+<form method="post" class="form-inline">
+	<div class="input-group mb-3">
+		<input asp-for="SearchString" class="form-control mr-1" placeholder="Enter search term" />
+		<input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+	</div>
+</form>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr style="background-color:white">
+			<th>
+				Id
+			</th>
+			<th>
+				Name
+			</th>
+			<th>
+				Address
+			</th>
+			<th>
+				Phone Number
+			</th>
+			<th>
+				Email
+			</th>
+			<th>
+				Functions
+			</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Customers != null)
+		{
+			foreach (var customer in Model.Customers)
+			{
+				<tr style="background-color: white">
+					<td>
+						@customer.Id
+					</td>
+					<td>
+						@customer.Name
+					</td>
+					<td>
+						@customer.Address
+					</td>
+					<td>
+						@customer.Phonenumber
+					</td>
+					<td>
+						@customer.Email
+					</td>
+					<td>
+						<a class="btn btn-primary btn-sm" type="button" title="Edit" asp-page="EditCustomer" asp-route-id="@customer.Id"><i class="fa fa-edit"></i></a>
+						<a class="btn btn-danger btn-sm" type="button" title="Delete" asp-page="DeleteCustomer" asp-route-id="@customer.Id"><i class="fa fa-trash"></i></a>
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<p>
+	<a class="btn btn-primary" asp-page="CreateCustomer"> Create a new Customer </a>
+</p>

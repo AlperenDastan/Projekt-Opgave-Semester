@@ -1,0 +1,70 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: slategrey;
+    background-image: url('../images/xl byg.jpg');
+    background-blend-mode: hard-light;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.login {
+    width: 600px;
+    overflow: hidden;
+    margin: auto;
+    margin: 20 0 0 450px;
+    padding: 80px;
+    background: #cdb881b4;
+    border-radius: 15px;
+   
+   
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+label {
+    color: black;
+    font-size: 17px;
+}
+
+#Uname {
+    width: 425px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#Pass {
+    width: 425px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#log {
+    width: 425px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: black;
+}
+
+span {
+    color: white;
+    font-size: 17px;
+}
+
+a {
+    float:left;
+}
+
+

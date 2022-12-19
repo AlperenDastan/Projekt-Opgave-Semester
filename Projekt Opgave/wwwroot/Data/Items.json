@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 7,
+    "Name": "Mikrofon",
+    "Price": 6000,
+    "Description": "Udstyr",
+    "Tag": "Lyd"
+  },
+  {
+    "Id": 1,
+    "Name": "filur",
+    "Price": 10,
+    "Description": "is",
+    "Tag": "dessert"
+  },
+  {
+    "Id": 9,
+    "Name": "Payphone",
+    "Price": 8000,
+    "Description": "Tryna call home",
+    "Tag": "phone"
+  },
+  {
+    "Id": 4,
+    "Name": "test123",
+    "Price": 1234,
+    "Description": "1234",
+    "Tag": "1234"
+  },
+  {
+    "Id": 20,
+    "Name": "Basketbold",
+    "Price": 500,
+    "Description": "Fed bold",
+    "Tag": "Sport"
+  },
+  {
+    "Id": 50,
+    "Name": "hund",
+    "Price": 4000,
+    "Description": "gris",
+    "Tag": "IP"
+  }
+]

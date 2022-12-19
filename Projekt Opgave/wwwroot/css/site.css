@@ -1,0 +1,67 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url('../images/varmt billede 2.png');
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a 
+{
+    float: left;
+}
+p {
+    text-align: left;
+}
+
+outline
+{
+    outline:groove;
+    float: center;
+}
+
+textcenter
+{
+    text-align: center;
+}
+
+.display-4 
+{
+    color: cornsilk;
+}
+
+.colorcoding 
+{
+    color: cornsilk;
+}
+
+.colorcoding2
+{
+    color: cornsilk;
+}
+
+.navbar-brand
+{
+    width: 1350px;
+}
+
+.btn-primary 
+{
+    color: #fff;
+    background-color: black;
+    border-color:black;
+}
