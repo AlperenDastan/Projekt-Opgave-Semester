@@ -6,8 +6,6 @@ namespace Projekt_Opgave.Service.Order_Service
     {
         public List<Order> shoppingCart = new List<Order>();
 
-<<<<<<< HEAD
-
         public void AddToCart(Order item)
         {
             var existingItem = shoppingCart.FirstOrDefault(i => i.OrderId == item.OrderId);
@@ -33,8 +31,5 @@ namespace Projekt_Opgave.Service.Order_Service
                 }
             }
         }
-
-=======
->>>>>>> parent of 6ddbd05 (Title test)
     }
 }
