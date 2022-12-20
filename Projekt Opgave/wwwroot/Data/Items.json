@@ -28,17 +28,17 @@
     "Tag": "1234"
   },
   {
-    "Id": 20,
-    "Name": "Basketbold",
-    "Price": 500,
-    "Description": "Fed bold",
-    "Tag": "Sport"
-  },
-  {
     "Id": 50,
     "Name": "hund",
     "Price": 4000,
     "Description": "gris",
     "Tag": "IP"
+  },
+  {
+    "Id": 10,
+    "Name": "hej",
+    "Price": 500,
+    "Description": "ja tak",
+    "Tag": "spis"
   }
 ]

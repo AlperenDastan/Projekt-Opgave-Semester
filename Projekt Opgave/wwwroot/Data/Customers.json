@@ -1,12 +1,5 @@
 [
   {
-    "Id": 1,
-    "Name": "Maho",
-    "Address": "Maho",
-    "Phonenumber": "323293299",
-    "Email": "masjajajsjasj@gmail.com"
-  },
-  {
     "Id": 5,
     "Name": "Ulrik",
     "Address": "TRilleg\u00E5rden",
@@ -23,15 +16,15 @@
   {
     "Id": 7,
     "Name": "Ulrik Jensen",
-    "Address": "Yarrak kafa 3tv",
-    "Phonenumber": "53949321",
+    "Address": "Betonblok 3tv",
+    "Phonenumber": "53949324",
     "Email": "Ulrikjensen@gmail.com"
   },
   {
-    "Id": 8,
-    "Name": "Ulrik Olsen",
-    "Address": "Got kafa sad3asdd",
-    "Phonenumber": "123123",
-    "Email": "asdasd"
+    "Id": 60,
+    "Name": "Ahmed",
+    "Address": "Syrien",
+    "Phonenumber": "31315959",
+    "Email": "HT@hotmail.com"
   }
 ]

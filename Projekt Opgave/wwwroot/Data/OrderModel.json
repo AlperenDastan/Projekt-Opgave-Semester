@@ -1,34 +1,24 @@
 [
   {
-    "OrderId": 1,
-    "Item": "asdasd",
-    "Amount": 6000,
-    "TotalPrice": 22,
-    "OrderDate": "asdasda",
-    "DeliveryDate": "asdasd"
+    "Id": 0,
+    "CustomerName": "Planker",
+    "CustomerEmail": "Henrik",
+    "CustomerPhoneNumber": "Henrik@gmail.com",
+    "Item": "53535353",
+    "Amount": 6,
+    "TotalPrice": 2000,
+    "OrderDate": "20-12-2022",
+    "DeliveryDate": "25-12-2022"
   },
   {
-    "OrderId": 2,
-    "Item": "asdasd",
-    "Amount": 6000,
-    "TotalPrice": 22,
-    "OrderDate": "asdasda",
-    "DeliveryDate": "asdasd"
-  },
-  {
-    "OrderId": 3,
-    "Item": "asdasd",
-    "Amount": 6000,
-    "TotalPrice": 22,
-    "OrderDate": "asdasda",
-    "DeliveryDate": "asdasd"
-  },
-  {
-    "OrderId": 4,
-    "Item": "asdasd",
-    "Amount": 6000,
-    "TotalPrice": 22,
-    "OrderDate": "asdasda",
-    "DeliveryDate": "asdasd"
+    "Id": 1,
+    "CustomerName": "Bordplader",
+    "CustomerEmail": "James",
+    "CustomerPhoneNumber": "JamesHarden@gmail.dk",
+    "Item": "12345678",
+    "Amount": 20,
+    "TotalPrice": 50000,
+    "OrderDate": "20-12-2022",
+    "DeliveryDate": "26-12-2022"
   }
 ]

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Projekt_Opgave.Models;
 using Projekt_Opgave.Service.Item_Service;
 using Projekt_Opgave.Service.Order_Service;
 
@@ -40,8 +41,19 @@ namespace Projekt_Opgave.Pages.Orders
 			{
 				return Page();
 			}
-			_orderService.AddItem(Order);
+			//_orderService.AddItem(Order);
 			return RedirectToPage("GetAllItems");
 		}
-	}
+        public IActionResult OnPostNameSearch()
+        {
+            Order = _orderService.NameSearch(SearchString).ToList();
+            return Page();
+        }
+
+        public IActionResult OnPostPriceFilter()
+        {
+            Order = _orderService.PriceFilter(MaxPrice, MinPrice).ToList();
+            return Page();
+        }
+    }
 }

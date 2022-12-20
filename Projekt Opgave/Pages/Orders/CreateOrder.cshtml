@@ -1,0 +1,66 @@
+﻿@page
+@model Projekt_Opgave.Pages.Orders.CreateOrderModel
+@{
+}
+
+<h1 class="colorcoding2">Create Order</h1>
+<form method="post">
+<div class="colorcoding2">
+	<div class="form-group">
+		<label asp-for="@Model.order.Id" class="control-label"></label>
+		<input asp-for="@Model.order.Id" class="form-control" />
+			<span asp-validation-for="@Model.order.Id" class="text-danger"></span>
+	</div>
+		<div class="form-group">
+			<label asp-for="@Model.order.CustomerName" class="control-label"></label>
+			<input asp-for="@Model.order.CustomerName" class="form-control" />
+			<span asp-validation-for="@Model.order.CustomerName" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.order.CustomerEmail" class="control-label"></label>
+			<input asp-for="@Model.order.CustomerEmail" class="form-control" />
+			<span asp-validation-for="@Model.order.CustomerEmail" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.order.CustomerPhoneNumber" class="control-label"></label>
+			<input asp-for="@Model.order.CustomerPhoneNumber" class="form-control" />
+			<span asp-validation-for="@Model.order.CustomerPhoneNumber" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="@Model.order.Item" class="control-label"></label>
+		<input asp-for="@Model.order.Item" class="form-control" />
+		<span asp-validation-for="@Model.order.Item" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="@Model.order.Amount" class="control-label"></label>
+		<input asp-for="@Model.order.Amount" class="form-control" />
+		<span asp-validation-for="@Model.order.Amount" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+			<label asp-for="@Model.order.OrderDate" class="control-label"></label>
+			<input asp-for="@Model.order.OrderDate" class="form-control" />
+			<span asp-validation-for="@Model.order.OrderDate" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="@Model.order.TotalPrice" class="control-label"></label>
+			<input asp-for="@Model.order.TotalPrice" class="form-control" />
+			<span asp-validation-for="@Model.order.TotalPrice" class="text-danger"></span>
+	</div>
+		<div class="form-group">
+			<label asp-for="@Model.order.DeliveryDate" class="control-label"></label>
+			<input asp-for="@Model.order.DeliveryDate" class="form-control" />
+			<span asp-validation-for="@Model.order.DeliveryDate" class="text-danger"></span>
+		</div>
+
+	<p>
+		<div class="form-group">
+			<input type="submit" value="Update" class="btn btn-primary" />
+		</div>
+	</p>
+</div>
+</form>
+
+<br />
+<p>
+	<a asp-page="/Orders/Order" class="btn btn-primary">Back to List</a>
+</p>

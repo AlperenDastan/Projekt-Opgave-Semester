@@ -55,7 +55,7 @@ namespace Projekt_Opgave.Service.Order_Service
 		{
 			foreach (OrderModel item in _items)
 			{
-				if (item.OrderId == id)
+				if (item.Id == id)
 					return item;
 			}
 
@@ -66,11 +66,6 @@ namespace Projekt_Opgave.Service.Order_Service
 			_items.Add(item);
 			JsonFileItemService.SaveJsonItems(_items);
 		}
-        public void AddItem(List<OrderModel> item)
-        {
-            _items.AddRange(item);
-            JsonFileItemService.SaveJsonItems(_items);
-        }
 
 
         public void UpdateItem(OrderModel item)
@@ -79,24 +74,30 @@ namespace Projekt_Opgave.Service.Order_Service
 			{
 				foreach (OrderModel i in _items)
 				{
-					if (i.OrderId == item.OrderId)
+					if (i.Id == item.Id)
 					{
 						i.Item = item.Item;
 						i.Amount = item.Amount;
-					}
+                        i.TotalPrice = item.TotalPrice;
+                        i.CustomerEmail = item.CustomerEmail;
+                        i.CustomerPhoneNumber = item.CustomerPhoneNumber;
+                        i.CustomerName = item.CustomerName;
+                        i.DeliveryDate = item.DeliveryDate;
+                        i.OrderDate = item.OrderDate;
+                    }
 				}
 				JsonFileItemService.SaveJsonItems(_items);
 			}
 		}
 
-		public OrderModel DeleteItem(int itemId)
+		public OrderModel DeleteOrder(int orderId)
 		{
 			OrderModel itemToBeDeleted = null;
-			foreach (OrderModel item in _items)
+			foreach (OrderModel order in _items)
 			{
-				if (item.OrderId == itemId)
+				if (order.Id == orderId)
 				{
-					itemToBeDeleted = item;
+					itemToBeDeleted = order;
 					break;
 				}
 			}
@@ -115,29 +116,29 @@ namespace Projekt_Opgave.Service.Order_Service
 		public IEnumerable<OrderModel> NameSearch(string str)
 		{
 			List<OrderModel> nameSearch = new List<OrderModel>();
-			foreach (OrderModel item in _items)
+			foreach (OrderModel order in _items)
 			{
-				if (string.IsNullOrEmpty(str) || item.Item.ToLower().Contains(str.ToLower()) || item.OrderDate.ToLower().Contains(str.ToLower()))
+				if (string.IsNullOrEmpty(str) || order.Id.ToString().Equals(str.ToLower()))
 				{
-					nameSearch.Add(item);
+					nameSearch.Add(order);
 				}
 			}
 
 			return nameSearch;
 		}
-		public IEnumerable<OrderModel> NameSearch(string str, string type) // Dette er en Overload. Man kan kopiere samme metode, men de skal have andre parametre, enten flere eller mindre. 
-		{
-			List<OrderModel> nameSearch = new List<OrderModel>();
-			foreach (OrderModel item in _items)
-			{
-				if (string.IsNullOrEmpty(str) || item.Item.ToLower().Contains(str.ToLower()))
-				{
-					nameSearch.Add(item);
-				}
-			}
+		//public IEnumerable<OrderModel> NameSearch(string str, string type) // Dette er en Overload. Man kan kopiere samme metode, men de skal have andre parametre, enten flere eller mindre. 
+		//{
+		//	List<OrderModel> nameSearch = new List<OrderModel>();
+		//	foreach (OrderModel item in _items)
+		//	{
+		//		if (string.IsNullOrEmpty(str) || item.Item.ToLower().Contains(str.ToLower()))
+		//		{
+		//			nameSearch.Add(item);
+		//		}
+		//	}
 
-			return nameSearch;
-		}
+		//	return nameSearch;
+		//}
 
 		public IEnumerable<OrderModel> PriceFilter(int maxPrice, int minPrice = 0)
 		{

@@ -3,10 +3,7 @@
 @{
 }
 
-<div class="colorcoding">
-
-
-    <h1>Items</h1>
+<h1 class="colorcoding">Orders</h1>
 
     <form method="post" class="form-inline">
         <div class="input-group mb-3">
@@ -36,13 +33,29 @@
                     Id
                 </th>
                 <th>
-                    Name
+                    Item
                 </th>
                 <th>
-                    Price
+                    Customer Name
+                </th>
+               
+                <th>
+                    Customer Email
                 </th>
                 <th>
-                    Description
+                    Customer PhoneNumber
+                </th>
+                <th>
+                    Amount
+                </th>
+                <th>
+                    Order Date
+                </th>
+                <th>
+                    Total Price
+                </th>
+                <th>
+                    Delivery Date
                 </th>
                 <th>
                     Functions
@@ -57,7 +70,16 @@
                 {
                     <tr style="background-color: white">
                         <td>
-                            @item.OrderId
+                            @item.Id
+                        </td>
+                         <td>
+                            @item.CustomerName
+                        </td>
+                        <td>
+                            @item.CustomerEmail
+                        </td>
+                        <td>
+                            @item.CustomerPhoneNumber
                         </td>
                         <td>
                             @item.Item
@@ -76,12 +98,14 @@
                             @item.DeliveryDate
                         </td>
                         <td>
-                            <a class="btn btn-primary btn-sm" type="button" title="Edit" asp-page="EditItem" asp-route-id="@item.OrderId"><i class="fa fa-edit"></i></a>
-                            <a class="btn btn-danger btn-sm" type="button" title="Delete" asp-page="DeleteItem" asp-route-id="@item.OrderId"><i class="fa fa-trash"></i></a>
+                            <a class="btn btn-primary btn-sm" type="button" title="Edit" asp-page="EditOrder" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a>
+                            <a class="btn btn-danger btn-sm" type="button" title="Delete" asp-page="DeleteOrder" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 }
             }
         </tbody>
     </table>
-</div>
+<p>
+    <a class="btn btn-primary" asp-page="CreateOrder"> Create a new Order </a>
+</p>
